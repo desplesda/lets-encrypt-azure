@@ -78,7 +78,7 @@ stages:
     variables:
     - group: 'Deployment Credentials'
     - name: ResourceGroupName
-      value: 'yarnspinner'
+      value: 'yarnspinner-letsencrypt'
 
     steps:
     - task: DownloadPipelineArtifact@1
@@ -115,7 +115,7 @@ stages:
     variables:
     - group: 'Deployment Credentials'
     - name: ResourceGroupName
-      value: 'yarnspinner'
+      value: 'yarnspinner-letsencrypt'
 
     steps:
     - task: DownloadPipelineArtifact@1
