@@ -89,7 +89,7 @@ stages:
     - task: AzurePowerShell@4
       displayName: 'Deploy'
       inputs:
-        azureSubscription: 'Opensource Deployments'
+        azureSubscription: 'Yarn Spinner Let\'s Encrypt'
         ScriptPath: '$(System.ArtifactsDirectory)/Deploy.ps1'
         ScriptArguments: '-ResourceGroupName $(ResourceGroupName)'
         azurePowerShellVersion: LatestVersion
@@ -102,7 +102,7 @@ stages:
     - task: AzureFunctionApp@1
       displayName: 'Deploy Azure Function App'
       inputs:
-        azureSubscription: 'Opensource Deployments'
+        azureSubscription: 'Yarn Spinner Let\'s Encrypt'
         appType: functionApp
         appName: '$(ResourceGroupName)'
         package: '$(System.ArtifactsDirectory)/LetsEncrypt.Func'
@@ -126,7 +126,7 @@ stages:
     - task: AzurePowerShell@4
       displayName: 'Deploy'
       inputs:
-        azureSubscription: 'Opensource Deployments'
+        azureSubscription: 'Yarn Spinner Let\'s Encrypt'
         ScriptPath: '$(System.ArtifactsDirectory)/Deploy.ps1'
         ScriptArguments: '-ResourceGroupName $(ResourceGroupName) -File integration.json'
         azurePowerShellVersion: LatestVersion
